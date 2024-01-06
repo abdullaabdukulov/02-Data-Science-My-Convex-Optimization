@@ -3,8 +3,8 @@ from scipy.optimize import minimize_scalar
 import numpy as np 
 from scipy.optimize import linprog
 
-def print_a_function(f,values):
-    x_min = minimize_scalar(f,method='brent')
+def print_a_function(f, values):
+    x_min = minimize_scalar(f, method='brent')
     print(f'x_min:{x_min.x}, f(x_min): {x_min.fun}')
     x = np.linspace(x_min.x - 1, x_min.x + 1, values)
     y = [f(val) for val in x]
@@ -45,3 +45,12 @@ def gradient_descent(f, f_prime, start, learning_rate=0.01):
 def solve_linear_problem(a, b, c):
     r = linprog(c, a, b)
     return round(r.fun), r.x
+
+# Example usage:
+# a = np.array([[1, 1], [2, 1], [0, 1]])
+# b = np.array([4, 5, 6])
+# c = np.array([-3, -5])
+
+# result, solution = solve_linear_problem(a, b, c)
+# print("Result:", result)
+# print("Solution:", solution)
