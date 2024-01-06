@@ -23,5 +23,6 @@ The minimum of the convex function is much easier to reach: we just need to foll
 ```
 python ./my_convex_optimization
 ```
+At the bottom of the code added how to use the code.
 
 ### The Core Team
