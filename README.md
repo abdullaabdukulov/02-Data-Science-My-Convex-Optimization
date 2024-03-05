@@ -1,48 +1,7 @@
-# 02-Data-Science-My-Convex-Optimization
+# Welcome to My-Convex-Optimization
 
-<div class="row">
-<div class="col tab-content">
-<div class="tab-pane active show" id="subject" role="tabpanel">
-<div class="row">
-<div class="col-md-12 col-xl-12">
-<div class="markdown-body">
-<p class="text-muted m-b-15">
-</p><h1>My Convex Optimization</h1>
-<p>Remember to git add &amp;&amp; git commit &amp;&amp; git push each exercise!</p>
-<p>We will execute your function with our test(s), please DO NOT PROVIDE ANY TEST(S) in your file</p>
-<p>For each exercise, you will have to create a folder and in this folder, you will have additional files that contain your work. Folder names are provided at the beginning of each exercise under <code>submit directory</code> and specific file names for each exercise are also provided at the beginning of each exercise under <code>submit file(s)</code>.</p>
-<hr>
-<table>
-<thead>
-<tr>
-<th>My Convex Optimization</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Submit directory</td>
-<td>.</td>
-</tr>
-<tr>
-<td>Submit file</td>
-<td>my_convex_optimization</td>
-</tr>
-</tbody>
-</table>
-<h3>Description</h3>
-<h2>Subject</h2>
-<p>One of the main challenges of Data Science and more specifically in Machine Learning is the performance measure.
-How to measure performance efficiently so that our model predictions meet the business objectives?</p>
-<p>For example, let's pretend our goal is to classify fruits to know if a fruit is an apple, an orange, or something else, depending on some attributes (color, shape, weight...).</p>
-<p>Intuitively, the measure of 'how far' is our model prediction from the correct answer tells us about the effectiveness of our algorithm. The farther is our prediction the worse is our performance. We can then define a <code>cost function</code> based on this 'distance'. We want to minimize this cost function in order to have the best prediction possible, i.e we want to find the point where the value of this cost function is the lowest.</p>
-<p>Generally, minimizing a function is not an easy task. However, some functions are easier to optimize than others: Convex functions.</p>
+<h3>Task</h3>
 <img src="https://storage.googleapis.com/qwasar-public/track-ds/convex_vs_non_convex.png" width="400">
-<p>On the left, the function is said to be convex: it is beautifully round. On the contrary, the function on the right has a lot of valleys and bumps.
-The minimum of the convex function is much easier to reach: we just need to follow the slope ! With non convex function, following the slope would not work since reaching a cavity does not ensure that this cavity is the lowest one !</p>
-<p>Finding the minimum of a convex function is called ... Convex Optimization ! You might have already heard about something called Gradient Descent before. This is an algorithm which does exactly that: following the slope to the cavity.</p>
-<p>This project is meant to be an introduction to some convex optimization tools and to implement your own optimization algorithm.</p>
-<h2>Introduction</h2>
 <p>To get a feel with the problem, we are going to start with a simple function to optimize:</p>
 <p><code>f(x) = (x - 1)^4 + x^2</code></p>
 <p>Which translates in python to: <code>f = lambda x : (x - 1)**4 + x**2</code></p>
@@ -76,7 +35,7 @@ plt.legend(loc = 1)
 </code></pre>
 <p>You should see something similar to:</p>
 <img src="https://storage.googleapis.com/qwasar-public/track-ds/brent_example.png" width="300" height="300">
-<h2>Gradient Descent Methods</h2>
+<h4>Gradient Descent Methods</h4>
 <p>Suppose you are lost at the top of a hill at night. You cannot see anything, you can only feel the ground beneath your feet. An intuitive way to reach the village downhill as fast as possible is to follow the steepest slope.</p>
 <p>This is the idea behind the gradient descent. It measures the local gradient of the cost function and goes towards the direction of the descending gradient. Once the gradient cancels out, it means we reached a minimum.</p>
 <p>x<sub>k + 1</sub> = x<sub>k</sub> - α ∇f(x<sub>k</sub>)</p>
@@ -104,7 +63,7 @@ print("xmin: 0.2f, f(x_min): 0.2f"  (x_min, f_min))
 <p>Using the gradient_descent, you should find a value similar to the previous methods.</p>
 <p>Gradient Descent methods are the workhorse of machine learning, from linear regression to deep neural nets.
 Here, we used it in a one dimension problem, but it can be used with any number of dimensions !</p>
-<h2>To go further</h2>
+<h4>To go further</h4>
 <p>Adding linear constraints to a convex function does not change its convexity, it remains convex. What it does though is restricting the space of solutions by intersecting it with hyperplanes.
 If our convex function solution space is a spherical orange, applying linear constraints is like slicing the orange. It remains convex but sharper.</p>
 <p><img src="https://storage.googleapis.com/qwasar-public/track-ds/linear_constraints_orange.png" width="200" height="200"></p>
@@ -130,7 +89,7 @@ the function x - 2y = 3. The area inside the orange polytope is the intersection
 b = ...
 c = ...
 </code></pre>
-<h3>Simplex algorithm</h3>
+<h4>Simplex algorithm</h4>
 <p>We are going to solve this linear problem with the <a href="https://en.wikipedia.org/wiki/Simplex_algorithm" target="_blank">Simplex method</a>.
 The simplex algorithm is pretty straightforward: it moves from a vertex to another until it finds a solution which maximizes the objective function.</p>
 <p>→ <strong>Solve the linear problem using simplex method</strong></p>
@@ -145,7 +104,7 @@ print("The optimal value is: ", optimal_value, " and is reached for x = ", optim
 </code></pre>
 <p>→ <strong>Is the solution you found located on the edge of the polytope? Why?</strong></p>
 <p><strong>hint</strong>: The idea is very similar to the <a href="https://en.wikipedia.org/wiki/Gaussian_elimination" target="_blank">Gauss' pivot</a></p>
-<h2>Technical Description</h2>
+<h3>Description</h3>
 <p>You will have to implement multiple functions:</p>
 <pre class=" language-plain"><code class=" language-plain">- def print_a_function(f, values)
 It will plot the function with the values received as parameters.
@@ -166,13 +125,9 @@ b = np.array([10,8,3])
 c = np.array([-1,-2])
 </code></pre>
 
-<p></p>
-</div>
+### Installation
+For working with this project you should install required libraries mentioned in `requirements.txt` file. do this instead:
+```pip install -r requirements.txt```
 
-</div>
-</div>
-</div>
-<div class="tab-pane" id="resources" role="tabpanel">
-</div>
-</div>
-</div>
+### Usage
+for using this project you need to run `my_convex_optimization.ipynb` file
