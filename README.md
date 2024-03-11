@@ -147,7 +147,8 @@ print("The optimal value is: ", optimal_value, " and is reached for x = ", optim
 <p><strong>hint</strong>: The idea is very similar to the <a href="https://en.wikipedia.org/wiki/Gaussian_elimination" target="_blank">Gauss' pivot</a></p>
 <h2>Technical Description</h2>
 <p>You will have to implement multiple functions:</p>
-<pre class=" language-plain"><code class=" language-plain">- def print_a_function(f, values)
+<pre class=" language-plain"><code class=" language-plain">
+- def print_a_function(f, values)
 It will plot the function with the values received as parameters.
 
 - def find_root_bisection(f, min, max)
