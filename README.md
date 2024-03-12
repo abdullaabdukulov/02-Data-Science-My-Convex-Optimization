@@ -27,6 +27,7 @@ for optimization.
     Write a simple gradient descent function which finds the minimum of a function f
 
 <p><img src="https://storage.googleapis.com/qwasar-public/gradient_descent.png" width="300" height="300"> </p>
+<<<<<<< Abdumalikov_Aziz
 
 
     def solve_linear_problem(A, b, c):
@@ -73,3 +74,4 @@ The script will execute and provide outputs for root-finding, optimization using
 
 
 
+=
