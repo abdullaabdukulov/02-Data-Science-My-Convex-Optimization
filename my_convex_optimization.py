@@ -46,19 +46,6 @@ def solve_linear_problem(a, b, c):
     r = linprog(c, a, b)
     return round(r.fun), r.x
 
-def run_all_functions():
-    # Example functions to test
-    def quadratic(x):
-        return x ** 2 - 4
-
-    def quadratic_derivative(x):
-        return 2 * x
-
-    def linear(x):
-        return 3 * x - 2
-
-    # Test all functions
-    print_a_function(quadratic, 100)
     print("Root using bisection method:", find_root_bisection(quadratic, 1, 3))
     print("Root using Newton-Raphson method:", find_root_newton_raphson(quadratic, quadratic_derivative, 3))
     print("Minimum using gradient descent:", gradient_descent(quadratic, quadratic_derivative, 10))
