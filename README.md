@@ -41,7 +41,7 @@ for optimization.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your_username/02-Data-Science-My-Convex-Optimization.git
+   git clone https://github.com/aabdumalikov/02-Data-Science-My-Convex-Optimization.git
    ```
 
 2. Navigate to the project directory:
@@ -58,7 +58,7 @@ for optimization.
 
 ## Usage
 1. Open the main.py file in your preferred Python environment.
-2. Run the script.
+2. Run the jupyter.
 
     ```bash
     python my_convex_optimization.ipynb
