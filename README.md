@@ -30,3 +30,5 @@ To make sure the answer is correct, we will check it against Brent's method for 
 pip install numpy
 pip install matplotlib
 pip install scipy
+
+python3 my_convex_optimization.py
