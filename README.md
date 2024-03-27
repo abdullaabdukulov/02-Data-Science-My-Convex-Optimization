@@ -22,10 +22,6 @@ Once you are done playing around with root-finding methods, we will use find_roo
 
 → Use find_root to find the root of f prime.
 
-f' = 4*(x - 1)^3 + 2x
-
-To make sure the answer is correct, we will check it against Brent's method for optimization. Brent's method works as a combination of the secant method and parabola fittings.
-
 # Installation & Usage
 pip install numpy
 pip install matplotlib
