@@ -36,10 +36,9 @@ f' = 4*(x - 1)^3 + 2x
 
 To make sure the answer is correct, we will check it against Brent's method for optimization. Brent's method works as a combination of the secant method and parabola fittings.
 
-# Installation
+# Installation & Usage
 pip install matplotlib
 pip install numpy
 pip install scipy
 
-# Usage
 python my_convex_optimization.py
