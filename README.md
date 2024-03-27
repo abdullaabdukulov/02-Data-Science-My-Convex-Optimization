@@ -42,4 +42,4 @@ pip install numpy
 pip install scipy
 
 # Usage
-python3 my_convex_optimization.py
+python my_convex_optimization.py
